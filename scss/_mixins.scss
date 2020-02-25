@@ -1,0 +1,35 @@
+$custom-breakpoint-1 : "(max-width: 1199px)";
+$sm-breakpoint : "(max-width: 1023px)";
+$xs-breakpoint :  "(max-width: 767px)";
+$custom-breakpoint-2 : "(max-width: 767px) and (min-width: 641px)";
+
+@mixin custombreak-1{
+    @media #{$custom-breakpoint-1}{
+        @content;
+    }
+}
+@mixin custombreak-2{
+    @media #{$custom-breakpoint-2}{
+        @content;
+    }
+}
+@mixin medium-break{
+    @media #{$sm-breakpoint}{
+        @content;
+    }
+}
+@mixin small-break{
+    @media #{$xs-breakpoint}{
+        @content;
+    }
+}
+
+@mixin bgstyle{
+	background-size:cover;
+	background-repeat:no-repeat;
+	max-width:100%;
+	background-position:center center;
+}
+
+
+

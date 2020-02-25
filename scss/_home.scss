@@ -1,0 +1,326 @@
+.main-page{
+    @include small-break{
+        padding-top: 90px;
+    }
+    .vcenter{
+        display: flex;
+        align-items: center;
+        height: calc(100vh - 200px);
+        @include medium-break{
+            height: calc(100vh - 180px);
+        }
+        @include small-break{
+            min-height: 400px;
+            height: auto;
+            
+        }
+        @include custombreak-2{
+            height: calc(100vh - 220px);
+        }
+    }
+    .main-block{
+        max-width: 700px;
+        background-color: $Malibu-color;
+        padding:0px;
+        margin: 0 auto 70px;
+        @include medium-break{
+            max-width: 570px;
+        }
+        @include custombreak-2{
+            max-width: 500px;
+        }
+        .main-content{
+            background-color: $Alice-Blue;
+            padding: 85px 40px 70px 40px;
+            @include medium-break{
+                padding: 45px 20px 35px 20px;
+            }
+            @include small-break{
+                padding: 25px 20px 20px 20px;
+            }
+            h2{
+                color: $Dodger-Blue-color;
+                line-height: 45px;
+                text-transform: capitalize;
+                margin: 0px 0px 20px 0px;
+                @include medium-break{
+                    margin: 0px 0px 15px 0px;
+                    line-height: 35px;
+                    font-size: 28px;
+                }
+                @include small-break{
+                    margin: 0px 0px 10px 0px;
+                    line-height: 25px;
+                    font-size: 24px;
+                    text-align: center;
+                }
+                @include custombreak-2{
+                    text-align: left;
+                }
+            }
+            p{
+                margin-bottom: 0px;
+                font-size: 14px;
+                color: $Dodger-Blue-color;
+                @include small-break{
+                    text-align: center;
+                }
+                @include custombreak-2{
+                    text-align: left;
+                }
+            }
+            .btn-blk{
+                margin: 20px 0px 0px 0px;
+                
+                @include small-break{
+                    margin: 10px 0px 0px 0px;
+                    text-align: center;
+                }
+                @include custombreak-2{
+                    text-align: left;
+                    margin: 20px 0px 0px 0px;
+                }
+                .button{
+                    margin-bottom: 0px;
+                    padding: 11px 10px;
+                    border-radius: 4px;
+                    text-transform: uppercase;
+                    min-width: 120px;
+                    @include small-break{
+                        margin-bottom: 20px;
+                    }
+                    &.primary{
+                        background-color: $Dodger-Blue-color;
+                        border: 2px solid $Dodger-Blue-color;
+                        font-size: 12px;
+                        color: $white-color;
+                    }
+                    &.more{
+                        border: 2px solid $French-Pass-color;
+                        background-color: $white-color;
+                        margin-right: 20px;
+                        color: $Dodger-Blue-color;
+                        text-transform: uppercase;
+                        font-size: 12px;
+                        @include small-break{
+                            margin-right: 10px;
+                        }
+                        
+
+                    }
+                }
+            }
+        }
+        
+    }
+    .hexagon {
+        position: relative;
+        width: 130px; 
+        height: 70px;
+        background-color: $French-Pass-color;
+        margin: 40.41px 0 40.41px -50px;
+        -moz-transform:rotate(-31deg);  
+        -webkit-transform:rotate(-31deg);  
+        -o-transform:rotate(-31deg);  
+        -ms-transform:rotate(-31deg);  
+        line-height: 0px;
+        
+        @include small-break{
+            margin: 10px auto 0px;
+            top: -42px;
+        }
+        @include custombreak-2{
+            top: auto;
+            margin: 10px 0px 0px -30px;
+        }
+        &:before, &:after {
+            content: "";
+            position: absolute;
+            width: 0;
+            border-left: 65px solid transparent;
+            border-right: 65px solid transparent;
+        }
+        &:before {
+            bottom: 99%;
+            border-bottom: 40.41px solid $French-Pass-color;
+        }
+        &:after {
+            top: 99%;
+            width: 0;
+            border-top: 40.41px solid $French-Pass-color;
+        }
+      
+    }
+    #triangle-right {
+        width: 0;
+        height: 0;
+        border-top: 35px solid transparent;
+        border-left: 65px solid $Dodger-Blue-color;
+        border-bottom: 35px solid transparent;
+        line-height: 0px;
+    }
+    #triangle-left {
+        width: 0;
+        height: 0;
+        border-top: 35px solid transparent;
+        border-right: 65px solid $Dodger-Blue-color;
+        border-bottom: 35px solid transparent;
+        position: absolute;
+        z-index: 999;
+        right: 0px;
+        top: 0px;
+        line-height: 0px;
+    }
+}
+#more {
+    display: none;
+}
+
+.responsive{
+    background-color: transparent;
+    width: 100%;
+    height: 460px;
+    padding: 0px 35px;
+    .slick-prev{
+        left: 10px;
+        color: $Black-color;
+        border:1px solid $Black-color;
+        padding: 10px 10px 10px 9px;
+        height: 40px;
+        width: 40px;
+        top: 41%;
+        border-radius: 4px;
+        text-align: center;
+        &::before{
+           
+            color: $Black-color;
+            font-weight: 600;
+        }
+        &:hover{
+            color:$Dodger-Blue-color;
+            border: 1px solid $Dodger-Blue-color;
+            &::before{
+                color:$Dodger-Blue-color;
+            }
+        }
+        @include small-break{
+            top: 22%;
+            height: 30px;
+            width: 30px;
+            padding: 6px 10px 10px 5px;
+        }
+        @include custombreak-2{
+            top: 35%;
+        }
+        
+    }
+    .slick-next{
+        right: 10px;
+        border:1px solid $Black-color;
+        padding: 10px 11px 10px 9px;
+        height: 40px;
+        width: 40px;
+        top: 41%;
+        border-radius: 4px;
+        text-align: center;
+        @include small-break{
+            top: 22%;
+            height: 30px;
+            width: 30px;
+            padding: 6px 5px 10px 5px;
+        }
+        @include custombreak-2{
+            top: 35%;
+        }
+        &::before{
+            
+            font-weight: 600;
+            color: $Black-color;
+        }
+        &:hover{
+            color:$Dodger-Blue-color;
+            border: 1px solid $Dodger-Blue-color;
+            &::before{
+                color:$Dodger-Blue-color;
+            }
+        }
+    }
+    .slick-list{
+        width: 90%;
+        margin: 0 auto;
+        .slick-track{
+            .slick-slide{
+                margin: 0px 0px;
+                transition: all ease-in-out .3s;
+			    transition: all ease-in-out .3s;
+			    opacity: .2;
+                img {
+                    width: 100%;
+                    max-height: 400px;
+                }
+                .author-nm{
+                    font-size: 16px;
+                    color: $Dodger-Blue-color;
+                    margin: 20px 0px 0px 0px;
+                    padding: 5px 10px;
+                    border:2px solid $Malibu-color;
+                    display: inline-block;
+                    border-radius: 2px;
+                    text-transform: capitalize;
+                    
+                }
+            }
+            .slick-active {
+                opacity: .5;
+              }
+          
+              .slick-current {
+                opacity: 1;
+              }
+        }
+    }
+}
+
+a:hover, a:active{
+    outline: none;
+}
+
+.animatehide{
+    opacity:0;
+}
+.visible{
+    opacity:1;
+}
+.animated{
+    animation-duration: 2.5s!important;
+}
+.animated.animated-delay{
+    animation-duration: 4s!important;
+}
+.reveal{
+    padding: 0px;
+    outline: none;
+    .header{
+        background-color: $French-Pass-color;
+        padding: 10px 0px 10px 15px;
+        h4{
+            font-size: 24px;
+            color: $Dodger-Blue-color;
+            margin: 10px 0px 0px 0px;
+            font-weight: 600;
+        }
+        p{
+            font-size: 14px;
+            color: $Dodger-Blue-color;
+        }
+    }
+    .close-button{
+        color:$Dodger-Blue-color;
+        background-color: $white-color;
+        border-radius: 50%;
+        width: 40px;
+        height: 40px;
+        top: 10px;
+
+    }
+}

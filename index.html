@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Test Task</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css">
+	<script src="https://www.w3schools.com/lib/w3data.js"></script>   
+	
+</head>
+<body>
+	<section class="main-page animatable slideInLeft">
+		<div class="grid-container">
+			<div class="grid-x grid-padding-x">
+				<div class="small-12 cell vcenter align-middle">
+					<div class="main-block">
+						<div class="grid-x grid-padding-x align-middle">
+							<div class="small-12 medium-3 large-3 cel">
+								<div class="hexagon ">
+									<div id="triangle-right"></div>
+									<div id="triangle-left"></div>
+								</div>
+							</div>
+							<div class="small-12 medium-9 large-9 cell light-bk">
+								<div class="main-content animatable">
+									<h2>This is main page title</h2>
+									<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been<span id="dots">...</span><span id="more"> the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.</span></p>
+									<div class="btn-blk ">
+										<button id="myBtn" class="button more ">More</button>
+										<button id="loadGallery" class="button primary" disabled data-open="exampleModal2">Loading Gallery...</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+						
+					</div> <!-- main block closed -->
+				</div>
+			</div>
+		</div>
+	</section>
+	
+	<div class="reveal" id="exampleModal2" data-reveal>
+		<button class="close-button" data-close aria-label="Close reveal" type="button">
+			<span aria-hidden="true">&times;</span>
+		  </button>
+		<div class="header">
+			<h4>Gallery In Model</h4>
+			<p><img src="images/icon.png" alt="Icon" /> picsum.photo</p>
+		</div>
+		
+		<div class="slider responsive">
+		</div>
+	</div>
+	  
+	 
+	<footer w3-include-html="include/footer.html"></footer>
+	<!--- footer close here -->
+	
+	
+	<!--- Script goes here -->
+	
+	<script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+	<script src="js/foundation.min.js"></script>
+	<script src="js/custom.js"></script>
+	
+	<script src="js/slick.min.js"></script>
+    <script>
+	  $(document).foundation();
+	  w3IncludeHTML();
+	</script>
+	
+	
+	
+</body>
+</html>
